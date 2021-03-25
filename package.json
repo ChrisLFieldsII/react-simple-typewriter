@@ -1,11 +1,14 @@
 {
-  "name": "react-simple-typewriter",
-  "version": "1.0.13",
-  "description": "A simple react component for adding a nice typewriter effect to your project.",
-  "author": "awran5 <awran5@yahoo.com>",
+  "name": "@chrisfieldsii/react-use-typewriter",
+  "version": "1.0.0",
+  "description": "A configurable react hook for a typewriter effect. Includes a Typewriter component out the box.",
+  "contributors": [
+    "awran5 <awran5@yahoo.com>"
+  ],
+  "author": "Chris Fields II <chrisjr06@gmail.com>",
   "license": "MIT",
-  "repository": "https://github.com/awran5/react-simple-typewriter",
-  "bugs": "https://github.com/awran5/react-simple-typewriter/issues",
+  "repository": "https://github.com/ChrisLFieldsII/react-simple-typewriter",
+  "bugs": "https://github.com/ChrisLFieldsII/react-simple-typewriter/issues",
   "homepage": "https://react-simple-typewriter.vercel.app/",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
@@ -13,6 +16,9 @@
   "engines": {
     "node": ">=10"
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "microbundle-crl --no-compress --format modern,cjs",
     "start": "microbundle-crl watch --no-compress --format modern,cjs",
@@ -59,13 +65,13 @@
     "react-scripts": "^3.4.1",
     "typescript": "^3.7.5"
   },
-  "keywords": ["typewriter", "typewriter effect","react", "react typewriter", "react typewriter effect", "react-component"],
-  "tags": [
-    "react",
+  "keywords": [
     "typewriter",
+    "typewriter effect",
+    "react",
+    "react hook",
+    "react typewriter",
+    "react typewriter effect",
     "react-component"
-  ],
-  "files": [
-    "dist"
   ]
 }
