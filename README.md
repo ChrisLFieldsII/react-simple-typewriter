@@ -1,8 +1,8 @@
-# React Simple Typewriter
+# React Use Typewriter
 
-> A simple react component for adding a nice typewriter effect to your project.
+> A configurable react hook for a typewriter effect. Includes a Typewriter component out the box. Forked from `react-simple-typewriter`
 
-[![NPM](https://img.shields.io/npm/v/react-simple-typewriter.svg)](https://www.npmjs.com/package/react-simple-typewriter) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)![npm bundle size](https://img.shields.io/bundlephobia/min/react-simple-typewriter)![GitHub](https://img.shields.io/github/license/awran5/react-simple-typewriter)
+[![NPM](https://img.shields.io/npm/v/@chrisfieldsii/react-use-typewriter.svg)](https://www.npmjs.com/package/@chrisfieldsii/react-use-typewriter) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)![npm bundle size](https://img.shields.io/bundlephobia/min/@chrisfieldsii/react-use-typewriter)![GitHub](https://img.shields.io/github/license/ChrisLFieldsII/react-simple-typewriter)
 
 <p align="center">
   <img src="./screenshot.gif" alt="screenshot" />
@@ -12,16 +12,16 @@
 
 ```bash
 # npm
-npm i react-simple-typewriter
+npm i @chrisfieldsii/react-use-typewriter
 
 # Yarn
-yarn add react-simple-typewriter
+yarn add @chrisfieldsii/react-use-typewriter
 ```
 
 ## Usage (Hook)
 
 ```jsx
-import { useTypewriter } from 'react-simple-typewriter'
+import { useTypewriter } from '@chrisfieldsii/react-use-typewriter'
 
 const CustomSimpleTypewriter = () => {
   const text = useTypewriter({
@@ -35,7 +35,7 @@ const CustomSimpleTypewriter = () => {
 }
 ```
 
-### Hook Configuration
+### Hook Configuration (see props table below for descriptions)
 
 ```typescript
 interface TypewriterConfig {
@@ -54,8 +54,8 @@ interface TypewriterConfig {
 ```jsx
 import React from 'react'
 
-import Typewriter from 'react-simple-typewriter'
-import 'react-simple-typewriter/dist/index.css'
+import { Typewriter } from '@chrisfieldsii/react-use-typewriter'
+import '@chrisfieldsii/react-use-typewriter/dist/index.css'
 
 export default function App() {
   return (
@@ -87,22 +87,22 @@ export default function App() {
 
 ### Available Props
 
-| Prop          | Type                         | Description                                                                                                    | Default |
-| ------------- | ---------------------------- | -------------------------------------------------------------------------------------------------------------- | :-----: |
-| `loop`        | Boolean                      | Repeat the typing effect (true if present)                                                                     | `false` |
-| `cursor`      | Boolean                      | Show / Hide cursor (show if present)                                                                           | `false` |
-| `cursorStyle` | String                       | Change the cursor style                                                                                        | &#124;  |
-| `typeSpeed`   | Integer                      | Speed in Milliseconds                                                                                          |  `100`  |
-| `deleteSpeed` | Integer                      | Word deleting speed in Milliseconds                                                                            |  `50`   |
-| `delaySpeed`  | Integer                      | Delay after the word is written in Milliseconds                                                                | `1500`  |
-| `words`       | Array                        | Array of strings holding the words                                                                             |    -    |
-| `onLoop`      | (loopCount: Integer) => void | Called when a loop is complete. `loopCount` is the total number of completed loops. Only called if loop = true | `noop`  |
-| `onDone`      | () => void                   | Called when typewriter is done. Only called if loop = false                                                    | `noop`  |
+| Prop          | Type                         | Description                                                                                                    | Default  |
+| ------------- | ---------------------------- | -------------------------------------------------------------------------------------------------------------- | :------: |
+| `loop`        | Boolean                      | Repeat the typing effect (true if present)                                                                     | `false`  |
+| `cursor`      | Boolean                      | Show / Hide cursor (show if present)                                                                           | `false`  |
+| `cursorStyle` | String                       | Change the cursor style                                                                                        |  &#124;  |
+| `typeSpeed`   | Integer                      | Speed in Milliseconds                                                                                          |  `100`   |
+| `deleteSpeed` | Integer                      | Word deleting speed in Milliseconds                                                                            |   `50`   |
+| `delaySpeed`  | Integer                      | Delay after the word is written in Milliseconds                                                                |  `1500`  |
+| `words`       | Array                        | Array of strings holding the words                                                                             | required |
+| `onLoop`      | (loopCount: Integer) => void | Called when a loop is complete. `loopCount` is the total number of completed loops. Only called if loop = true |  `noop`  |
+| `onDone`      | () => void                   | Called when typewriter is done. Only called if loop = false                                                    |  `noop`  |
 
-### [Demo](https://react-simple-typewriter.vercel.app/)
+<!-- ### [Demo](https://react-simple-typewriter.vercel.app/) -->
 
-### [codeSandbox](https://codesandbox.io/s/react-typewriting-effect-8ulgs)
+<!-- ### [codeSandbox](https://codesandbox.io/s/react-typewriting-effect-8ulgs) -->
 
 ### License
 
-MIT © [awran5](https://github.com/awran5/)
+MIT © [ChrisLFieldsII](https://github.com/ChrisLFieldsII)
