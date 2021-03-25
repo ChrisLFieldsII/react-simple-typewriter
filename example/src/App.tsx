@@ -1,7 +1,7 @@
 import React from 'react'
 
-import Typewriter, { useTypewriter } from 'react-smiple-typewriter'
-import 'react-smiple-typewriter/dist/index.css'
+import { useTypewriter, Typewriter } from 'react-simple-typewriter'
+import 'react-simple-typewriter/dist/index.css'
 
 const App = () => {
   return (

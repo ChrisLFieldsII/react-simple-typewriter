@@ -18,7 +18,7 @@ interface TypewriterProps extends TypewriterConfig {
   cursorStyle?: string
 }
 
-export const useTypewriter = (config: TypewriterConfig): string => {
+const useTypewriter = (config: TypewriterConfig): string => {
   const {
     words,
     typeSpeed = 100,
@@ -98,7 +98,7 @@ export const useTypewriter = (config: TypewriterConfig): string => {
   return text
 }
 
-const Typewriter: React.FC<TypewriterProps> = ({
+const Typewriter = ({
   words,
   loop = false,
   cursor = false,
@@ -108,7 +108,7 @@ const Typewriter: React.FC<TypewriterProps> = ({
   deleteSpeed = 50,
   onLoop = noop,
   onDone = noop
-}) => {
+}: TypewriterProps) => {
   const text = useTypewriter({
     words,
     loop,
@@ -127,4 +127,6 @@ const Typewriter: React.FC<TypewriterProps> = ({
   )
 }
 
-export default memo(Typewriter)
+const PureTypewriter = memo(Typewriter)
+
+export { PureTypewriter as Typewriter, useTypewriter }
