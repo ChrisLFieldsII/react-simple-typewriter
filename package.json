@@ -1,6 +1,6 @@
 {
   "name": "@chrisfieldsii/react-use-typewriter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A configurable react hook for a typewriter effect. Includes a Typewriter component out the box.",
   "private": false,
   "contributors": [
